@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    place-items: center;
+
+    height: 100vh;
+
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+
+    background: hsl(218, 23%, 16%);
+
+    /*Novo metódo de uso do ccs, qual quer teg dentro de uma teg pai poder ser usada dessa forma*/
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        position: absolute;
+        bottom: 24%;
+    
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 100px;
+        max-height: 100px;
+    
+        border-radius: 50%;
+        background: hsl(176, 68%, 64%);
+        border: 0;
+        cursor: pointer;
+    }
+
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 100px;
+        max-height: 100px;
+
+        border-radius: 50%;
+        background:  hsl(150, 100%, 66%);
+        border: 0;
+
+        outline: none;
+        cursor: pointer;
+
+        transform: translateY(0%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    & button:hover {
+        
+        box-shadow: 0 0 40px  hsl(150, 100%, 66%);
+    }
+    
+}
+
+section {
+    display: grid;
+    place-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr); 
+
+    width: 80%;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 20px;
+
+    background: hsl(217, 19%, 24%);    
+    border-radius: 10px;
+
+
+    & .Conselhos {
+        font-family: 'Manrope';
+        font-size: 23px;
+        text-align: center;
+        font-weight: 800;
+
+        padding: 10px 0 20px 0;
+
+        color: hsl(193, 38%, 86%);
+    }
+    /*Novo metódo de uso do ccs, qal quer teg dentro de uma teg pai poder ser usada dessa forma*/
+    & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & span img {
+        width: 70%;
+    }
+
+    & .Advice {
+        font-family: Manrope;
+        font-size: 12px;
+        font-weight: 800;
+        padding: auto;
+    
+        color: hsl(150, 100%, 66%);
+        letter-spacing: 2px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    section {
+        width: 80%;
+    }
+    
+}
